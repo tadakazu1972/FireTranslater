@@ -16,7 +16,7 @@ public class Inquiry1Activity extends AppCompatActivity {
     //翻訳表示用TextView
     private TextView mText1 = null;
     private TextView mText2 = null;
-    private TextView mText3 = null;
+    private TextView mTextResult = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +34,7 @@ public class Inquiry1Activity extends AppCompatActivity {
     private void initTextViews(){
         mText1 = (TextView)findViewById(R.id.i10);
         mText2 = (TextView)findViewById(R.id.i11);
-        mText3 = (TextView)findViewById(R.id.i14);
+        mTextResult = (TextView)findViewById(R.id.textResult);
     }
 
     private void initButtons(){
@@ -43,7 +43,7 @@ public class Inquiry1Activity extends AppCompatActivity {
             public void onClick(View v){
                 String name = "i120";
                 int resourceId = getResources().getIdentifier(name, "string", getPackageName());
-                mText3.setText(resourceId);
+                mTextResult.setText(resourceId);
             }
         });
         mView.findViewById(R.id.btnInjured).setOnClickListener(new View.OnClickListener(){
@@ -51,13 +51,13 @@ public class Inquiry1Activity extends AppCompatActivity {
             public void onClick(View v){
                 String name = "i130";
                 int resourceId = getResources().getIdentifier(name, "string", getPackageName());
-                mText3.setText(resourceId);
+                mTextResult.setText(resourceId);
             }
         });
         mView.findViewById(R.id.btnClear).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                mText3.setText("");
+                mTextResult.setText("");
             }
         });
         mView.findViewById(R.id.btnHome).setOnClickListener(new View.OnClickListener(){

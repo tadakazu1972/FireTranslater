@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:text="@string/i101"
         android:textColor="#111111"
-        android:textSize="30sp"
+        android:textSize="24sp"
         android:paddingLeft="8dp"
         android:background="@drawable/frame"
         android:layout_marginBottom="30dp"/>
@@ -45,7 +45,7 @@
         android:layout_height="wrap_content"
         android:text="@string/i111"
         android:textColor="#111111"
-        android:textSize="30sp"
+        android:textSize="24sp"
         android:paddingLeft="8dp"
         android:background="@drawable/frame"
         android:layout_marginBottom="20dp"/>
@@ -59,7 +59,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/i121"
-            android:textSize="30sp"
+            android:textSize="24sp"
             android:textColor="#111111"
             android:layout_weight="1"/>
         <Button
@@ -67,22 +67,21 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/i131"
-            android:textSize="30sp"
+            android:textSize="24sp"
             android:textColor="#111111"
             android:layout_weight="1"/>
     </LinearLayout>
 
     <TextView
-        android:id="@+id/i14"
+        android:id="@+id/textResult"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=""
         android:textColor="#111111"
-        android:textSize="30sp"
+        android:textSize="24sp"
         android:textAlignment="center"
-        android:background="@drawable/frame"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="30dp"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
