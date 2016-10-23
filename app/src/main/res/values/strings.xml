@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FireTranslater</string>
+    <string name="i100">「私たちは消防署の救急隊員です。どうぞご安心ください。」</string>
+    <string name="i101">We are Emergency Medical（EMS) professional from a fire department.\nWe\'re here to help you.</string>
+    <string name="i111">What is your medical condition now\.</string>
+    <string name="i120">病気</string>
+    <string name="i121">sick</string>
+    <string name="i130">けが</string>
+    <string name="i131">injured</string>
+</resources>
