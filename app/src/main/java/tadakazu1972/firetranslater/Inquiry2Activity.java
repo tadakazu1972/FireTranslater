@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 
 /**
  * Created by tadakazu on 2016/10/23.
@@ -14,6 +16,8 @@ import android.widget.TextView;
 public class Inquiry2Activity extends AppCompatActivity {
     protected Inquiry2Activity mActivity = null;
     protected View mView = null;
+    //選択言語番号
+    private String mLangNum = null;
     //翻訳表示用TextView
     private TextView mText1 = null;
     private TextView mTextResult = null;
@@ -44,6 +48,9 @@ public class Inquiry2Activity extends AppCompatActivity {
         mActivity = this;
         mView = this.getWindow().getDecorView();
         setContentView(R.layout.inquiry2);
+        //選択言語番号を呼び出し
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
+        mLangNum = sp.getString("language","1"); // 第２引数はkeyが存在しない時に返す初期値
         //翻訳表示TextView初期化
         initTextViews();
         //ボタン初期化
@@ -58,7 +65,7 @@ public class Inquiry2Activity extends AppCompatActivity {
     private void initButtons(){
         //頭
         mHead = (Button)findViewById(R.id.btnHead);
-        String nameHead = "i211";
+        String nameHead = "i21" + mLangNum;
         int resourceIdHead = getResources().getIdentifier(nameHead, "string", getPackageName());
         mHead.setText(resourceIdHead);
         mView.findViewById(R.id.btnHead).setOnClickListener(new View.OnClickListener(){
@@ -71,7 +78,7 @@ public class Inquiry2Activity extends AppCompatActivity {
         });
         //目
         mEye = (Button)findViewById(R.id.btnEye);
-        String nameEye = "i221";
+        String nameEye = "i22" + mLangNum;
         int resourceIdEye = getResources().getIdentifier(nameEye, "string", getPackageName());
         mEye.setText(resourceIdEye);
         mEye.setOnClickListener(new View.OnClickListener(){
@@ -84,7 +91,7 @@ public class Inquiry2Activity extends AppCompatActivity {
         });
         //耳
         mEar = (Button)findViewById(R.id.btnEar);
-        String nameEar = "i231";
+        String nameEar = "i23" + mLangNum;
         int resourceIdEar = getResources().getIdentifier(nameEar, "string", getPackageName());
         mEar.setText(resourceIdEar);
         mEar.setOnClickListener(new View.OnClickListener(){
@@ -97,7 +104,7 @@ public class Inquiry2Activity extends AppCompatActivity {
         });
         //鼻
         mNose = (Button)findViewById(R.id.btnNose);
-        String nameNose = "i241";
+        String nameNose = "i24" + mLangNum;
         int resourceIdNose = getResources().getIdentifier(nameNose, "string", getPackageName());
         mNose.setText(resourceIdNose);
         mNose.setOnClickListener(new View.OnClickListener(){
@@ -110,7 +117,7 @@ public class Inquiry2Activity extends AppCompatActivity {
         });
         //口
         mMouth = (Button)findViewById(R.id.btnMouth);
-        String nameMouth = "i251";
+        String nameMouth = "i25" + mLangNum;
         int resourceIdMouth = getResources().getIdentifier(nameMouth, "string", getPackageName());
         mMouth.setText(resourceIdMouth);
         mMouth.setOnClickListener(new View.OnClickListener(){
@@ -123,7 +130,7 @@ public class Inquiry2Activity extends AppCompatActivity {
         });
         //歯
         mTooth = (Button)findViewById(R.id.btnTooth);
-        String nameTooth = "i261";
+        String nameTooth = "i26" + mLangNum;
         int resourceIdTooth = getResources().getIdentifier(nameTooth, "string", getPackageName());
         mTooth.setText(resourceIdTooth);
         mTooth.setOnClickListener(new View.OnClickListener(){
@@ -136,7 +143,7 @@ public class Inquiry2Activity extends AppCompatActivity {
         });
         //喉
         mThroat = (Button)findViewById(R.id.btnThroat);
-        String nameThroat = "i271";
+        String nameThroat = "i27" + mLangNum;
         int resourceIdThroat = getResources().getIdentifier(nameThroat, "string", getPackageName());
         mThroat.setText(resourceIdThroat);
         mThroat.setOnClickListener(new View.OnClickListener(){
@@ -149,7 +156,7 @@ public class Inquiry2Activity extends AppCompatActivity {
         });
         //肩
         mShoulder = (Button)findViewById(R.id.btnShoulder);
-        String nameShoulder = "i281";
+        String nameShoulder = "i28" + mLangNum;
         int resourceIdShoulder = getResources().getIdentifier(nameShoulder, "string", getPackageName());
         mShoulder.setText(resourceIdShoulder);
         mShoulder.setOnClickListener(new View.OnClickListener(){
@@ -162,7 +169,7 @@ public class Inquiry2Activity extends AppCompatActivity {
         });
         //腹
         mStomach = (Button)findViewById(R.id.btnStomach);
-        String nameStomach = "i291";
+        String nameStomach = "i29" + mLangNum;
         int resourceIdStomach = getResources().getIdentifier(nameStomach, "string", getPackageName());
         mStomach.setText(resourceIdStomach);
         mStomach.setOnClickListener(new View.OnClickListener(){
@@ -173,7 +180,12 @@ public class Inquiry2Activity extends AppCompatActivity {
                 mTextResult.setText(resourceId);
             }
         });
-        mView.findViewById(R.id.btnChest).setOnClickListener(new View.OnClickListener(){
+        //胸
+        mChest = (Button)findViewById(R.id.btnChest);
+        String nameChest = "i210" + mLangNum;
+        int resourceIdChest = getResources().getIdentifier(nameChest, "string", getPackageName());
+        mChest.setText(resourceIdChest);
+        mChest.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 String name = "i2100";
@@ -181,7 +193,12 @@ public class Inquiry2Activity extends AppCompatActivity {
                 mTextResult.setText(resourceId);
             }
         });
-        mView.findViewById(R.id.btnUpperBack).setOnClickListener(new View.OnClickListener(){
+        //背中
+        mUpperBack = (Button)findViewById(R.id.btnUpperBack);
+        String nameUpperBack = "i211" + mLangNum;
+        int resourceIdUpperBack = getResources().getIdentifier(nameUpperBack, "string", getPackageName());
+        mUpperBack.setText(resourceIdUpperBack);
+        mUpperBack.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 String name = "i2110";
@@ -189,7 +206,12 @@ public class Inquiry2Activity extends AppCompatActivity {
                 mTextResult.setText(resourceId);
             }
         });
-        mView.findViewById(R.id.btnLowerBack).setOnClickListener(new View.OnClickListener(){
+        //腰
+        mLowerBack = (Button)findViewById(R.id.btnLowerBack);
+        String nameLowerBack = "i212" + mLangNum;
+        int resourceIdLowerBack = getResources().getIdentifier(nameLowerBack, "string", getPackageName());
+        mLowerBack.setText(resourceIdLowerBack);
+        mLowerBack.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 String name = "i2120";
@@ -197,7 +219,12 @@ public class Inquiry2Activity extends AppCompatActivity {
                 mTextResult.setText(resourceId);
             }
         });
-        mView.findViewById(R.id.btnHandOrArm).setOnClickListener(new View.OnClickListener(){
+        //手または腕
+        mHandOrArm = (Button)findViewById(R.id.btnHandOrArm);
+        String nameHandOrArm = "i213" + mLangNum;
+        int resourceIdHandOrArm = getResources().getIdentifier(nameHandOrArm, "string", getPackageName());
+        mHandOrArm.setText(resourceIdHandOrArm);
+        mHandOrArm.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 String name = "i2130";
@@ -205,7 +232,12 @@ public class Inquiry2Activity extends AppCompatActivity {
                 mTextResult.setText(resourceId);
             }
         });
-        mView.findViewById(R.id.btnFinger).setOnClickListener(new View.OnClickListener(){
+        //指
+        mFinger = (Button)findViewById(R.id.btnFinger);
+        String nameFinger = "i214" + mLangNum;
+        int resourceIdFinger = getResources().getIdentifier(nameFinger, "string", getPackageName());
+        mFinger.setText(resourceIdFinger);
+        mFinger.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 String name = "i2140";
@@ -213,7 +245,12 @@ public class Inquiry2Activity extends AppCompatActivity {
                 mTextResult.setText(resourceId);
             }
         });
-        mView.findViewById(R.id.btnButtocks).setOnClickListener(new View.OnClickListener(){
+        //臀部
+        mButtocks = (Button)findViewById(R.id.btnButtocks);
+        String nameButtocks = "i215" + mLangNum;
+        int resourceIdButtocks = getResources().getIdentifier(nameButtocks, "string", getPackageName());
+        mButtocks.setText(resourceIdButtocks);
+        mButtocks.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 String name = "i2150";
@@ -221,7 +258,12 @@ public class Inquiry2Activity extends AppCompatActivity {
                 mTextResult.setText(resourceId);
             }
         });
-        mView.findViewById(R.id.btnLegOrFoot).setOnClickListener(new View.OnClickListener(){
+        //足
+        mLegOrFoot = (Button)findViewById(R.id.btnLegOrFoot);
+        String nameLegOrFoot = "i216" + mLangNum;
+        int resourceIdLegOrFoot = getResources().getIdentifier(nameLegOrFoot, "string", getPackageName());
+        mLegOrFoot.setText(resourceIdLegOrFoot);
+        mLegOrFoot.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 String name = "i2160";
@@ -229,7 +271,12 @@ public class Inquiry2Activity extends AppCompatActivity {
                 mTextResult.setText(resourceId);
             }
         });
-        mView.findViewById(R.id.btnKnee).setOnClickListener(new View.OnClickListener(){
+        //膝
+        mKnee = (Button)findViewById(R.id.btnKnee);
+        String nameKnee = "i217" + mLangNum;
+        int resourceIdKnee = getResources().getIdentifier(nameKnee, "string", getPackageName());
+        mKnee.setText(resourceIdKnee);
+        mKnee.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 String name = "i2170";
@@ -237,7 +284,12 @@ public class Inquiry2Activity extends AppCompatActivity {
                 mTextResult.setText(resourceId);
             }
         });
-        mView.findViewById(R.id.btnOther).setOnClickListener(new View.OnClickListener(){
+        //その他
+        mOther = (Button)findViewById(R.id.btnOther);
+        String nameOther = "i218" + mLangNum;
+        int resourceIdOther = getResources().getIdentifier(nameOther, "string", getPackageName());
+        mOther.setText(resourceIdOther);
+        mOther.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 String name = "i2180";
@@ -245,13 +297,14 @@ public class Inquiry2Activity extends AppCompatActivity {
                 mTextResult.setText(resourceId);
             }
         });
-        //
+        //クリア
         mView.findViewById(R.id.btnClear).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 mTextResult.setText("");
             }
         });
+        //ホーム
         mView.findViewById(R.id.btnHome).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){

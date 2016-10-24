@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Button;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 
 /**
  * Created by tadakazu on 2016/10/23.
@@ -13,10 +16,16 @@ import android.widget.TextView;
 public class Inquiry1Activity extends AppCompatActivity {
     protected Inquiry1Activity mActivity = null;
     protected View mView = null;
+    //選択言語番号
+    private String mLangNum = null;
     //翻訳表示用TextView
     private TextView mText1 = null;
     private TextView mText2 = null;
     private TextView mTextResult = null;
+    //ボタン
+    private Button mSick = null;
+    private Button mInjured = null;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +34,9 @@ public class Inquiry1Activity extends AppCompatActivity {
         mActivity = this;
         mView = this.getWindow().getDecorView();
         setContentView(R.layout.inquiry1);
+        //選択言語番号を呼び出し
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
+        mLangNum = sp.getString("language","1"); // 第２引数はkeyが存在しない時に返す初期値
         //翻訳表示TextView初期化
         initTextViews();
         //ボタン初期化
@@ -32,13 +44,27 @@ public class Inquiry1Activity extends AppCompatActivity {
     }
 
     private void initTextViews(){
+        //text1
         mText1 = (TextView)findViewById(R.id.i10);
+        String nameText1 = "i10" + mLangNum;
+        int resourceIdText1 = getResources().getIdentifier(nameText1, "string", getPackageName());
+        mText1.setText(resourceIdText1);
+        //text2
         mText2 = (TextView)findViewById(R.id.i11);
+        String nameText2 = "i11" + mLangNum;
+        int resourceIdText2 = getResources().getIdentifier(nameText2, "string", getPackageName());
+        mText2.setText(resourceIdText2);
+        //翻訳結果
         mTextResult = (TextView)findViewById(R.id.textResult);
     }
 
     private void initButtons(){
-        mView.findViewById(R.id.btnSick).setOnClickListener(new View.OnClickListener(){
+        //病気
+        mSick = (Button)findViewById(R.id.btnSick);
+        String nameSick = "i12" + mLangNum;
+        int resourceIdSick = getResources().getIdentifier(nameSick, "string", getPackageName());
+        mSick.setText(resourceIdSick);
+        mSick.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 String name = "i120";
@@ -46,7 +72,12 @@ public class Inquiry1Activity extends AppCompatActivity {
                 mTextResult.setText(resourceId);
             }
         });
-        mView.findViewById(R.id.btnInjured).setOnClickListener(new View.OnClickListener(){
+        //けが
+        mInjured = (Button)findViewById(R.id.btnInjured);
+        String nameInjured = "i13" + mLangNum;
+        int resourceIdInjured = getResources().getIdentifier(nameInjured, "string", getPackageName());
+        mInjured.setText(resourceIdInjured);
+        mInjured.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 String name = "i130";
@@ -54,12 +85,14 @@ public class Inquiry1Activity extends AppCompatActivity {
                 mTextResult.setText(resourceId);
             }
         });
+        //クリア
         mView.findViewById(R.id.btnClear).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 mTextResult.setText("");
             }
         });
+        //ホーム
         mView.findViewById(R.id.btnHome).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){

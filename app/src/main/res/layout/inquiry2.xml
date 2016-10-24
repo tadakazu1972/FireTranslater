@@ -126,14 +126,14 @@
             android:id="@+id/btnUpperBack"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="24sp"
+            android:textSize="18sp"
             android:textColor="#111111"
             android:layout_weight="1"/>
         <Button
             android:id="@+id/btnLowerBack"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="24sp"
+            android:textSize="18sp"
             android:textColor="#111111"
             android:layout_weight="1"/>
     </LinearLayout>
@@ -145,7 +145,7 @@
             android:id="@+id/btnHandOrArm"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="24sp"
+            android:textSize="18sp"
             android:textColor="#111111"
             android:layout_weight="1"/>
         <Button
@@ -171,7 +171,7 @@
             android:id="@+id/btnLegOrFoot"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="24sp"
+            android:textSize="18sp"
             android:textColor="#111111"
             android:layout_weight="1"/>
         <Button
