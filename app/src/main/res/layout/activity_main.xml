@@ -43,7 +43,7 @@
             android:text="Español"
             android:textSize="18sp"
             android:textColor="#ffffff"
-            android:backgroundTint="#6666ee"
+            android:backgroundTint="#cccccc"
             android:id="@+id/btnEspanyol"
             android:layout_weight="1"/>
     </LinearLayout>
@@ -66,7 +66,7 @@
             android:text="Nederlands"
             android:textSize="18sp"
             android:textColor="#ffffff"
-            android:backgroundTint="#6666ee"
+            android:backgroundTint="#cccccc"
             android:id="@+id/btnNederlands"
             android:layout_weight="1"/>
     </LinearLayout>
@@ -89,7 +89,7 @@
             android:text="Svenska"
             android:textSize="18sp"
             android:textColor="#ffffff"
-            android:backgroundTint="#6666ee"
+            android:backgroundTint="#cccccc"
             android:id="@+id/btnSvenska"
             android:layout_weight="1"/>
     </LinearLayout>
@@ -103,7 +103,7 @@
             android:text="Pусский"
             android:textSize="18sp"
             android:textColor="#ffffff"
-            android:backgroundTint="#6666ee"
+            android:backgroundTint="#cccccc"
             android:id="@+id/btnRussian"
             android:layout_weight="1"/>
         <Button
@@ -112,7 +112,7 @@
             android:text="Português"
             android:textSize="18sp"
             android:textColor="#ffffff"
-            android:backgroundTint="#6666ee"
+            android:backgroundTint="#cccccc"
             android:id="@+id/btnPortuguese"
             android:layout_weight="1"/>
     </LinearLayout>
@@ -126,7 +126,7 @@
             android:text="Français"
             android:textSize="18sp"
             android:textColor="#ffffff"
-            android:backgroundTint="#6666ee"
+            android:backgroundTint="#cccccc"
             android:id="@+id/btnFrench"
             android:layout_weight="1"/>
         <Button
@@ -135,7 +135,7 @@
             android:text="Indonesia"
             android:textSize="18sp"
             android:textColor="#ffffff"
-            android:backgroundTint="#6666ee"
+            android:backgroundTint="#cccccc"
             android:id="@+id/btnIndonesia"
             android:layout_weight="1"/>
     </LinearLayout>
@@ -149,7 +149,7 @@
             android:text="Deutsch"
             android:textSize="18sp"
             android:textColor="#ffffff"
-            android:backgroundTint="#6666ee"
+            android:backgroundTint="#cccccc"
             android:id="@+id/btnGermany"
             android:layout_weight="1"/>
         <Button
@@ -158,7 +158,7 @@
             android:text="Malay"
             android:textSize="18sp"
             android:textColor="#ffffff"
-            android:backgroundTint="#6666ee"
+            android:backgroundTint="#cccccc"
             android:id="@+id/btnMalay"
             android:layout_weight="1"/>
     </LinearLayout>
@@ -172,7 +172,7 @@
             android:text="Italiano"
             android:textSize="18sp"
             android:textColor="#ffffff"
-            android:backgroundTint="#6666ee"
+            android:backgroundTint="#cccccc"
             android:id="@+id/btnItalian"
             android:layout_weight="1"/>
         <Button
@@ -181,7 +181,7 @@
             android:text="ไทย"
             android:textSize="18sp"
             android:textColor="#ffffff"
-            android:backgroundTint="#6666ee"
+            android:backgroundTint="#cccccc"
             android:id="@+id/btnThai"
             android:layout_weight="1"/>
     </LinearLayout>
