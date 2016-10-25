@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FireTranslater</string>
+    <string name="app_name">救急問診</string>
     <string name="langnum0">日本語</string>
     <string name="langnum1">英語</string>
     <string name="i100">「私たちは消防署の救急隊員です。\nどうぞご安心ください。」</string>
