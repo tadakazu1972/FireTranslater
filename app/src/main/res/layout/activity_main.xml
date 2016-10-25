@@ -7,7 +7,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="救急問診翻訳アプリ"
+        android:text="救急問診アプリ"
         android:textAlignment="center"
         android:textSize="30sp"
         android:textColor="#ffffff"
@@ -186,5 +186,15 @@
             android:layout_weight="1"/>
     </LinearLayout>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="日本語"
+        android:textSize="18sp"
+        android:textColor="#ffffff"
+        android:backgroundTint="#6666ee"
+        android:id="@+id/btnJapanese"
+        android:gravity="center"
+        android:layout_marginTop="20dp"/>
 
 </LinearLayout>

@@ -1,12 +1,16 @@
 <resources>
     <string name="app_name">FireTranslater</string>
+    <string name="langnum0">日本語</string>
+    <string name="langnum1">英語</string>
     <string name="i100">「私たちは消防署の救急隊員です。\nどうぞご安心ください。」</string>
     <string name="i101">We are Emergency Medical(EMS) professional from a fire department.\nWe\'re here to help you.</string>
+    <string name="i110">どうしましたか？</string>
     <string name="i111">What is your medical condition now.</string>
     <string name="i120">病気</string>
     <string name="i121">sick</string>
     <string name="i130">けが</string>
     <string name="i131">injured</string>
+    <string name="i200">どこが痛みますか？</string>
     <string name="i201">Where is the part which hurts?</string>
     <string name="i210">頭</string>
     <string name="i211">Head</string>

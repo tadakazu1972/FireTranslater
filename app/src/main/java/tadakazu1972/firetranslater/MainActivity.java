@@ -25,12 +25,26 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initButtons(){
+        //英語
         mView.findViewById(R.id.btnEnglish).setOnClickListener(new OnClickListener(){
             @Override
             public void onClick(View v){
                 //選択した言語番号保存　英語＝1
                 SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mActivity);
                 sp.edit().putString("language", "1").apply();
+                //ホーム画面へ
+                Intent intent = new Intent(mActivity, HomeActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        //日本語
+        mView.findViewById(R.id.btnJapanese).setOnClickListener(new OnClickListener(){
+            @Override
+            public void onClick(View v){
+                //選択した言語番号保存　日本語＝0
+                SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mActivity);
+                sp.edit().putString("language", "0").apply();
                 //ホーム画面へ
                 Intent intent = new Intent(mActivity, HomeActivity.class);
                 startActivity(intent);

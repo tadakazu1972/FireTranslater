@@ -1,6 +1,7 @@
 package tadakazu1972.firetranslater;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -49,11 +50,21 @@ public class Inquiry1Activity extends AppCompatActivity {
         String nameText1 = "i10" + mLangNum;
         int resourceIdText1 = getResources().getIdentifier(nameText1, "string", getPackageName());
         mText1.setText(resourceIdText1);
+        //日本語の時はフォント、背景ともに白色にして見えなくする
+        if(mLangNum.equals("0")) {
+            mText1.setTextColor(Color.WHITE);
+            mText1.setBackgroundResource(R.drawable.frame2);
+        }
         //text2
         mText2 = (TextView)findViewById(R.id.i11);
         String nameText2 = "i11" + mLangNum;
         int resourceIdText2 = getResources().getIdentifier(nameText2, "string", getPackageName());
         mText2.setText(resourceIdText2);
+        //日本語の時はフォント、背景ともに白色にして見えなくする
+        if(mLangNum.equals("0")) {
+            mText2.setTextColor(Color.WHITE);
+            mText2.setBackgroundResource(R.drawable.frame2);
+        }
         //翻訳結果
         mTextResult = (TextView)findViewById(R.id.textResult);
     }

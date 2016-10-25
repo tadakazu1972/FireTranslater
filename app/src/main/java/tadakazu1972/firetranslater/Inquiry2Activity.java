@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
+import android.graphics.Color;
 
 /**
  * Created by tadakazu on 2016/10/23.
@@ -58,7 +59,17 @@ public class Inquiry2Activity extends AppCompatActivity {
     }
 
     private void initTextViews(){
+        //text1
         mText1 = (TextView)findViewById(R.id.i21);
+        String nameText1 = "i20" + mLangNum;
+        int resourceIdText1 = getResources().getIdentifier(nameText1, "string", getPackageName());
+        mText1.setText(resourceIdText1);
+        //日本語の時はフォント、背景ともに白色にして見えなくする
+        if(mLangNum.equals("0")) {
+            mText1.setTextColor(Color.WHITE);
+            mText1.setBackgroundResource(R.drawable.frame2);
+        }
+        //
         mTextResult = (TextView)findViewById(R.id.txtResult);
     }
 
