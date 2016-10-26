@@ -37,6 +37,8 @@ public class Inquiry4Activity extends AppCompatActivity {
     private Button mButton11 = null;
     private Button mButton12 = null;
     private Button mButton13 = null;
+    //電卓数字格納用
+    String mNum = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +50,8 @@ public class Inquiry4Activity extends AppCompatActivity {
         //選択言語番号を呼び出し
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
         mLangNum = sp.getString("language","1"); // 第２引数はkeyが存在しない時に返す初期値
+        //電卓数字格納変数初期化
+        mNum = "";
         //翻訳表示TextView初期化
         initTextViews();
         //ボタン初期化
@@ -76,7 +80,8 @@ public class Inquiry4Activity extends AppCompatActivity {
         mButton1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                mTextResult0.setText("1");
+                mNum = mNum + "1";
+                mTextResult0.setText(mNum);
             }
         });
         //
@@ -84,7 +89,8 @@ public class Inquiry4Activity extends AppCompatActivity {
         mButton2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                mTextResult0.setText("2");
+                mNum = mNum + "2";
+                mTextResult0.setText(mNum);
             }
         });
         //
@@ -92,7 +98,8 @@ public class Inquiry4Activity extends AppCompatActivity {
         mButton3.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                mTextResult0.setText("3");
+                mNum = mNum + "3";
+                mTextResult0.setText(mNum);
             }
         });
         //
@@ -100,7 +107,8 @@ public class Inquiry4Activity extends AppCompatActivity {
         mButton4.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                mTextResult0.setText("4");
+                mNum = mNum + "4";
+                mTextResult0.setText(mNum);
             }
         });
         //
@@ -108,7 +116,8 @@ public class Inquiry4Activity extends AppCompatActivity {
         mButton5.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                mTextResult0.setText("5");
+                mNum = mNum + "5";
+                mTextResult0.setText(mNum);
             }
         });
         //
@@ -116,7 +125,8 @@ public class Inquiry4Activity extends AppCompatActivity {
         mButton6.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                mTextResult0.setText("6");
+                mNum = mNum + "6";
+                mTextResult0.setText(mNum);
             }
         });
         //
@@ -124,7 +134,8 @@ public class Inquiry4Activity extends AppCompatActivity {
         mButton7.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                mTextResult0.setText("7");
+                mNum = mNum + "7";
+                mTextResult0.setText(mNum);
             }
         });
         //
@@ -132,7 +143,8 @@ public class Inquiry4Activity extends AppCompatActivity {
         mButton8.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                mTextResult0.setText("8");
+                mNum = mNum + "8";
+                mTextResult0.setText(mNum);
             }
         });
         //
@@ -140,7 +152,8 @@ public class Inquiry4Activity extends AppCompatActivity {
         mButton9.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                mTextResult0.setText("9");
+                mNum = mNum + "9";
+                mTextResult0.setText(mNum);
             }
         });
         //
@@ -148,7 +161,8 @@ public class Inquiry4Activity extends AppCompatActivity {
         mButton10.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                mTextResult0.setText("0");
+                mNum = mNum + "0";
+                mTextResult0.setText(mNum);
             }
         });
         //
@@ -193,7 +207,8 @@ public class Inquiry4Activity extends AppCompatActivity {
         mView.findViewById(R.id.btnClear).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                mTextResult0.setText("");
+                mNum = "";
+                mTextResult0.setText(mNum);
                 mTextResult.setText("");
             }
         });
