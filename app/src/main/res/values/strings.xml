@@ -74,4 +74,12 @@
     <string name="i3111">spasm</string>
     <string name="i3120">その他</string>
     <string name="i3121">other</string>
+    <string name="i400">症状（痛み）はいつから？</string>
+    <string name="i401">When did the symptoms(the pain) start?</string>
+    <string name="i410">分前</string>
+    <string name="i411">minutes ago</string>
+    <string name="i420">時間前</string>
+    <string name="i421">hour ago</string>
+    <string name="i430">日前</string>
+    <string name="i431">days ago</string>
 </resources>

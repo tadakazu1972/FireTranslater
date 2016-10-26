@@ -14,13 +14,14 @@ import android.widget.TextView;
  * Created by tadakazu on 2016/10/23.
  */
 
-public class Inquiry3Activity extends AppCompatActivity {
-    protected Inquiry3Activity mActivity = null;
+public class Inquiry4Activity extends AppCompatActivity {
+    protected Inquiry4Activity mActivity = null;
     protected View mView = null;
     //選択言語番号
     private String mLangNum = null;
     //翻訳表示用TextView
     private TextView mText1 = null;
+    private TextView mTextResult0 = null;
     private TextView mTextResult = null;
     //ボタン
     private Button mButton1 = null;
@@ -35,6 +36,7 @@ public class Inquiry3Activity extends AppCompatActivity {
     private Button mButton10 = null;
     private Button mButton11 = null;
     private Button mButton12 = null;
+    private Button mButton13 = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +44,7 @@ public class Inquiry3Activity extends AppCompatActivity {
 
         mActivity = this;
         mView = this.getWindow().getDecorView();
-        setContentView(R.layout.inquiry3);
+        setContentView(R.layout.inquiry4);
         //選択言語番号を呼び出し
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
         mLangNum = sp.getString("language","1"); // 第２引数はkeyが存在しない時に返す初期値
@@ -54,8 +56,8 @@ public class Inquiry3Activity extends AppCompatActivity {
 
     private void initTextViews(){
         //text1
-        mText1 = (TextView)findViewById(R.id.i31);
-        String nameText1 = "i30" + mLangNum;
+        mText1 = (TextView)findViewById(R.id.i41);
+        String nameText1 = "i40" + mLangNum;
         int resourceIdText1 = getResources().getIdentifier(nameText1, "string", getPackageName());
         mText1.setText(resourceIdText1);
         //日本語の時はフォント、背景ともに白色にして見えなくする
@@ -64,162 +66,125 @@ public class Inquiry3Activity extends AppCompatActivity {
             mText1.setBackgroundResource(R.drawable.frame2);
         }
         //
+        mTextResult0 = (TextView)findViewById(R.id.txtResult0);
         mTextResult = (TextView)findViewById(R.id.txtResult);
     }
 
     private void initButtons(){
         //
-        mButton1 = (Button)findViewById(R.id.btn31);
-        String name31 = "i31" + mLangNum;
-        int resourceId31 = getResources().getIdentifier(name31, "string", getPackageName());
-        mButton1.setText(resourceId31);
+        mButton1 = (Button)findViewById(R.id.btn41);
         mButton1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                String name = "i310";
-                int resourceId = getResources().getIdentifier(name, "string", getPackageName());
-                mTextResult.setText(resourceId);
+                mTextResult0.setText("1");
             }
         });
         //
-        mButton2 = (Button)findViewById(R.id.btn32);
-        String name32 = "i32" + mLangNum;
-        int resourceId32 = getResources().getIdentifier(name32, "string", getPackageName());
-        mButton2.setText(resourceId32);
+        mButton2 = (Button)findViewById(R.id.btn42);
         mButton2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                String name = "i320";
-                int resourceId = getResources().getIdentifier(name, "string", getPackageName());
-                mTextResult.setText(resourceId);
+                mTextResult0.setText("2");
             }
         });
         //
-        mButton3 = (Button)findViewById(R.id.btn33);
-        String name33 = "i33" + mLangNum;
-        int resourceId33 = getResources().getIdentifier(name33, "string", getPackageName());
-        mButton3.setText(resourceId33);
+        mButton3 = (Button)findViewById(R.id.btn43);
         mButton3.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                String name = "i330";
-                int resourceId = getResources().getIdentifier(name, "string", getPackageName());
-                mTextResult.setText(resourceId);
+                mTextResult0.setText("3");
             }
         });
         //
-        mButton4 = (Button)findViewById(R.id.btn34);
-        String name34 = "i34" + mLangNum;
-        int resourceId34 = getResources().getIdentifier(name34, "string", getPackageName());
-        mButton4.setText(resourceId34);
+        mButton4 = (Button)findViewById(R.id.btn44);
         mButton4.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                String name = "i340";
-                int resourceId = getResources().getIdentifier(name, "string", getPackageName());
-                mTextResult.setText(resourceId);
+                mTextResult0.setText("4");
             }
         });
         //
-        mButton5 = (Button)findViewById(R.id.btn35);
-        String name35 = "i35" + mLangNum;
-        int resourceId35 = getResources().getIdentifier(name35, "string", getPackageName());
-        mButton5.setText(resourceId35);
+        mButton5 = (Button)findViewById(R.id.btn45);
         mButton5.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                String name = "i350";
-                int resourceId = getResources().getIdentifier(name, "string", getPackageName());
-                mTextResult.setText(resourceId);
+                mTextResult0.setText("5");
             }
         });
         //
-        mButton6 = (Button)findViewById(R.id.btn36);
-        String name36 = "i36" + mLangNum;
-        int resourceId36 = getResources().getIdentifier(name36, "string", getPackageName());
-        mButton6.setText(resourceId36);
+        mButton6 = (Button)findViewById(R.id.btn46);
         mButton6.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                String name = "i360";
-                int resourceId = getResources().getIdentifier(name, "string", getPackageName());
-                mTextResult.setText(resourceId);
+                mTextResult0.setText("6");
             }
         });
         //
-        mButton7 = (Button)findViewById(R.id.btn37);
-        String name37 = "i37" + mLangNum;
-        int resourceId37 = getResources().getIdentifier(name37, "string", getPackageName());
-        mButton7.setText(resourceId37);
+        mButton7 = (Button)findViewById(R.id.btn47);
         mButton7.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                String name = "i370";
-                int resourceId = getResources().getIdentifier(name, "string", getPackageName());
-                mTextResult.setText(resourceId);
+                mTextResult0.setText("7");
             }
         });
         //
-        mButton8 = (Button)findViewById(R.id.btn38);
-        String name38 = "i38" + mLangNum;
-        int resourceId38 = getResources().getIdentifier(name38, "string", getPackageName());
-        mButton8.setText(resourceId38);
+        mButton8 = (Button)findViewById(R.id.btn48);
         mButton8.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                String name = "i380";
-                int resourceId = getResources().getIdentifier(name, "string", getPackageName());
-                mTextResult.setText(resourceId);
+                mTextResult0.setText("8");
             }
         });
         //
-        mButton9 = (Button)findViewById(R.id.btn39);
-        String name39 = "i39" + mLangNum;
-        int resourceId39 = getResources().getIdentifier(name39, "string", getPackageName());
-        mButton9.setText(resourceId39);
+        mButton9 = (Button)findViewById(R.id.btn49);
         mButton9.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                String name = "i390";
-                int resourceId = getResources().getIdentifier(name, "string", getPackageName());
-                mTextResult.setText(resourceId);
+                mTextResult0.setText("9");
             }
         });
         //
-        mButton10 = (Button)findViewById(R.id.btn310);
-        String name310 = "i310" + mLangNum;
-        int resourceId310 = getResources().getIdentifier(name310, "string", getPackageName());
-        mButton10.setText(resourceId310);
+        mButton10 = (Button)findViewById(R.id.btn410);
         mButton10.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                String name = "i3100";
-                int resourceId = getResources().getIdentifier(name, "string", getPackageName());
-                mTextResult.setText(resourceId);
+                mTextResult0.setText("0");
             }
         });
         //
-        mButton11 = (Button)findViewById(R.id.btn311);
-        String name311 = "i311" + mLangNum;
-        int resourceId311 = getResources().getIdentifier(name311, "string", getPackageName());
-        mButton11.setText(resourceId311);
+        mButton11 = (Button)findViewById(R.id.btn411);
+        String name411 = "i41" + mLangNum;
+        int resourceId411 = getResources().getIdentifier(name411, "string", getPackageName());
+        mButton11.setText(resourceId411);
         mButton11.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                String name = "i3110";
+                String name = "i410";
                 int resourceId = getResources().getIdentifier(name, "string", getPackageName());
                 mTextResult.setText(resourceId);
             }
         });
         //
-        mButton12 = (Button)findViewById(R.id.btn312);
-        String name321 = "i312" + mLangNum;
-        int resourceId321 = getResources().getIdentifier(name321, "string", getPackageName());
-        mButton12.setText(resourceId321);
+        mButton12 = (Button)findViewById(R.id.btn412);
+        String name421 = "i42" + mLangNum;
+        int resourceId421 = getResources().getIdentifier(name421, "string", getPackageName());
+        mButton12.setText(resourceId421);
         mButton12.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                String name = "i3120";
+                String name = "i420";
+                int resourceId = getResources().getIdentifier(name, "string", getPackageName());
+                mTextResult.setText(resourceId);
+            }
+        });
+        mButton13 = (Button)findViewById(R.id.btn413);
+        String name431 = "i43" + mLangNum;
+        int resourceId431 = getResources().getIdentifier(name431, "string", getPackageName());
+        mButton13.setText(resourceId431);
+        mButton13.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                String name = "i430";
                 int resourceId = getResources().getIdentifier(name, "string", getPackageName());
                 mTextResult.setText(resourceId);
             }
@@ -228,6 +193,7 @@ public class Inquiry3Activity extends AppCompatActivity {
         mView.findViewById(R.id.btnClear).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
+                mTextResult0.setText("");
                 mTextResult.setText("");
             }
         });
