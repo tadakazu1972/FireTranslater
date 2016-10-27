@@ -73,6 +73,13 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        mView.findViewById(R.id.btnInquiry5).setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(mActivity, Inquiry5Activity.class);
+                startActivity(intent);
+            }
+        });
         mView.findViewById(R.id.btnBack).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
