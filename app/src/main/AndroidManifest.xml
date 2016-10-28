@@ -27,6 +27,8 @@
         </activity>
         <activity android:name=".Inquiry5Activity">
         </activity>
+        <activity android:name=".Inquiry6Activity">
+        </activity>
     </application>
 
 </manifest>
