@@ -122,7 +122,7 @@
             android:id="@+id/btn510"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="24sp"
+            android:textSize="18sp"
             android:textColor="#111111"
             android:layout_weight="1"/>
     </LinearLayout>
@@ -134,7 +134,7 @@
             android:id="@+id/btn511"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:textColor="#111111"
             android:layout_weight="1"/>
         <Button

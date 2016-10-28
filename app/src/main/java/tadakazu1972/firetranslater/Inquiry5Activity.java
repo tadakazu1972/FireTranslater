@@ -190,7 +190,6 @@ public class Inquiry5Activity extends AppCompatActivity {
         String name10 = "i510" + mLangNum;
         int resourceId10 = getResources().getIdentifier(name10, "string", getPackageName());
         mButton10.setText(resourceId10);
-        mButton10.setBackgroundColor(Color.WHITE);
         mButton10.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){

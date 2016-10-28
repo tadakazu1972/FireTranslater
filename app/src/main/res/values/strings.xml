@@ -102,10 +102,10 @@
     <string name="i581">resting</string>
     <string name="i590">運動中</string>
     <string name="i591">exercising</string>
-    <string name="i5100"></string>
-    <string name="i5101"></string>
-    <string name="i5110">運動後</string>
-    <string name="i5111">finished exercising</string>
+    <string name="i5100">運動後</string>
+    <string name="i5101">finished exercising</string>
+    <string name="i5110">家事中</string>
+    <string name="i5111">housework</string>
     <string name="i5120">その他</string>
     <string name="i5121">other</string>
 </resources>
