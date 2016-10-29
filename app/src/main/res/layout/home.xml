@@ -100,7 +100,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="4dp"/>
     <Button
-        android:id="@+id/btnInquiry9"
+        android:id="@+id/btnExplain1"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="処置内容説明"
@@ -110,7 +110,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="4dp"/>
     <Button
-        android:id="@+id/btnInquiry10"
+        android:id="@+id/btnExplain2"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="病院搬送説明"

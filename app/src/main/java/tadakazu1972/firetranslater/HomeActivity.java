@@ -87,6 +87,27 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        mView.findViewById(R.id.btnInquiry7).setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(mActivity, Inquiry7Activity.class);
+                startActivity(intent);
+            }
+        });
+        mView.findViewById(R.id.btnExplain1).setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(mActivity, Explain1Activity.class);
+                startActivity(intent);
+            }
+        });
+        mView.findViewById(R.id.btnExplain2).setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(mActivity, Explain2Activity.class);
+                startActivity(intent);
+            }
+        });
         mView.findViewById(R.id.btnBack).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
