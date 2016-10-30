@@ -170,6 +170,21 @@ public class ResultActivity extends AppCompatActivity {
                 mText5.setText("");
                 mText6.setText("");
                 mText7.setText("");
+                //SharedPreferenceもクリアしておく
+                SharedPreferences sp1 = PreferenceManager.getDefaultSharedPreferences(mActivity);
+                sp1.edit().putString("result1", "").apply();
+                SharedPreferences sp2 = PreferenceManager.getDefaultSharedPreferences(mActivity);
+                sp2.edit().putString("result2", "").apply();
+                SharedPreferences sp3 = PreferenceManager.getDefaultSharedPreferences(mActivity);
+                sp3.edit().putString("result3", "").apply();
+                SharedPreferences sp4 = PreferenceManager.getDefaultSharedPreferences(mActivity);
+                sp4.edit().putString("result4", "").apply();
+                SharedPreferences sp5 = PreferenceManager.getDefaultSharedPreferences(mActivity);
+                sp5.edit().putString("result5", "").apply();
+                SharedPreferences sp6 = PreferenceManager.getDefaultSharedPreferences(mActivity);
+                sp6.edit().putString("result6", "").apply();
+                SharedPreferences sp7 = PreferenceManager.getDefaultSharedPreferences(mActivity);
+                sp7.edit().putString("result7", "").apply();
             }
         });
         //ホーム
