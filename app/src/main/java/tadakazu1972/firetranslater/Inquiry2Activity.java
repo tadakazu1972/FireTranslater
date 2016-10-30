@@ -85,6 +85,8 @@ public class Inquiry2Activity extends AppCompatActivity {
                 String name = "i210";
                 int resourceId = getResources().getIdentifier(name, "string", getPackageName());
                 mTextResult.setText(resourceId);
+                //SharedPreferencesに保存
+                setSharedPreferences(resourceId);
             }
         });
         //目
@@ -98,6 +100,8 @@ public class Inquiry2Activity extends AppCompatActivity {
                 String name = "i220";
                 int resourceId = getResources().getIdentifier(name, "string", getPackageName());
                 mTextResult.setText(resourceId);
+                //SharedPreferencesに保存
+                setSharedPreferences(resourceId);
             }
         });
         //耳
@@ -111,6 +115,8 @@ public class Inquiry2Activity extends AppCompatActivity {
                 String name = "i230";
                 int resourceId = getResources().getIdentifier(name, "string", getPackageName());
                 mTextResult.setText(resourceId);
+                //SharedPreferencesに保存
+                setSharedPreferences(resourceId);
             }
         });
         //鼻
@@ -124,6 +130,8 @@ public class Inquiry2Activity extends AppCompatActivity {
                 String name = "i240";
                 int resourceId = getResources().getIdentifier(name, "string", getPackageName());
                 mTextResult.setText(resourceId);
+                //SharedPreferencesに保存
+                setSharedPreferences(resourceId);
             }
         });
         //口
@@ -137,6 +145,8 @@ public class Inquiry2Activity extends AppCompatActivity {
                 String name = "i250";
                 int resourceId = getResources().getIdentifier(name, "string", getPackageName());
                 mTextResult.setText(resourceId);
+                //SharedPreferencesに保存
+                setSharedPreferences(resourceId);
             }
         });
         //歯
@@ -150,6 +160,8 @@ public class Inquiry2Activity extends AppCompatActivity {
                 String name = "i260";
                 int resourceId = getResources().getIdentifier(name, "string", getPackageName());
                 mTextResult.setText(resourceId);
+                //SharedPreferencesに保存
+                setSharedPreferences(resourceId);
             }
         });
         //喉
@@ -163,6 +175,8 @@ public class Inquiry2Activity extends AppCompatActivity {
                 String name = "i270";
                 int resourceId = getResources().getIdentifier(name, "string", getPackageName());
                 mTextResult.setText(resourceId);
+                //SharedPreferencesに保存
+                setSharedPreferences(resourceId);
             }
         });
         //肩
@@ -176,6 +190,8 @@ public class Inquiry2Activity extends AppCompatActivity {
                 String name = "i280";
                 int resourceId = getResources().getIdentifier(name, "string", getPackageName());
                 mTextResult.setText(resourceId);
+                //SharedPreferencesに保存
+                setSharedPreferences(resourceId);
             }
         });
         //腹
@@ -189,6 +205,8 @@ public class Inquiry2Activity extends AppCompatActivity {
                 String name = "i290";
                 int resourceId = getResources().getIdentifier(name, "string", getPackageName());
                 mTextResult.setText(resourceId);
+                //SharedPreferencesに保存
+                setSharedPreferences(resourceId);
             }
         });
         //胸
@@ -202,6 +220,8 @@ public class Inquiry2Activity extends AppCompatActivity {
                 String name = "i2100";
                 int resourceId = getResources().getIdentifier(name, "string", getPackageName());
                 mTextResult.setText(resourceId);
+                //SharedPreferencesに保存
+                setSharedPreferences(resourceId);
             }
         });
         //背中
@@ -215,6 +235,8 @@ public class Inquiry2Activity extends AppCompatActivity {
                 String name = "i2110";
                 int resourceId = getResources().getIdentifier(name, "string", getPackageName());
                 mTextResult.setText(resourceId);
+                //SharedPreferencesに保存
+                setSharedPreferences(resourceId);
             }
         });
         //腰
@@ -228,6 +250,8 @@ public class Inquiry2Activity extends AppCompatActivity {
                 String name = "i2120";
                 int resourceId = getResources().getIdentifier(name, "string", getPackageName());
                 mTextResult.setText(resourceId);
+                //SharedPreferencesに保存
+                setSharedPreferences(resourceId);
             }
         });
         //手または腕
@@ -241,6 +265,8 @@ public class Inquiry2Activity extends AppCompatActivity {
                 String name = "i2130";
                 int resourceId = getResources().getIdentifier(name, "string", getPackageName());
                 mTextResult.setText(resourceId);
+                //SharedPreferencesに保存
+                setSharedPreferences(resourceId);
             }
         });
         //指
@@ -254,6 +280,8 @@ public class Inquiry2Activity extends AppCompatActivity {
                 String name = "i2140";
                 int resourceId = getResources().getIdentifier(name, "string", getPackageName());
                 mTextResult.setText(resourceId);
+                //SharedPreferencesに保存
+                setSharedPreferences(resourceId);
             }
         });
         //臀部
@@ -267,6 +295,8 @@ public class Inquiry2Activity extends AppCompatActivity {
                 String name = "i2150";
                 int resourceId = getResources().getIdentifier(name, "string", getPackageName());
                 mTextResult.setText(resourceId);
+                //SharedPreferencesに保存
+                setSharedPreferences(resourceId);
             }
         });
         //足
@@ -280,6 +310,8 @@ public class Inquiry2Activity extends AppCompatActivity {
                 String name = "i2160";
                 int resourceId = getResources().getIdentifier(name, "string", getPackageName());
                 mTextResult.setText(resourceId);
+                //SharedPreferencesに保存
+                setSharedPreferences(resourceId);
             }
         });
         //膝
@@ -293,6 +325,8 @@ public class Inquiry2Activity extends AppCompatActivity {
                 String name = "i2170";
                 int resourceId = getResources().getIdentifier(name, "string", getPackageName());
                 mTextResult.setText(resourceId);
+                //SharedPreferencesに保存
+                setSharedPreferences(resourceId);
             }
         });
         //その他
@@ -306,6 +340,8 @@ public class Inquiry2Activity extends AppCompatActivity {
                 String name = "i2180";
                 int resourceId = getResources().getIdentifier(name, "string", getPackageName());
                 mTextResult.setText(resourceId);
+                //SharedPreferencesに保存
+                setSharedPreferences(resourceId);
             }
         });
         //クリア
@@ -313,6 +349,9 @@ public class Inquiry2Activity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 mTextResult.setText("");
+                //SharedPreferenceもクリアしておく
+                SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mActivity);
+                sp.edit().putString("result2", "").apply();
             }
         });
         //ホーム
@@ -323,5 +362,12 @@ public class Inquiry2Activity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    private void setSharedPreferences(int resId){
+        //翻訳結果で用いるためSharedPreferenceに登録
+        String s = getResources().getString(resId);
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mActivity);
+        sp.edit().putString("result2", s).apply();
     }
 }

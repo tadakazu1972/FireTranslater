@@ -11,7 +11,6 @@ import android.preference.PreferenceManager;
 public class MainActivity extends AppCompatActivity {
     protected MainActivity mActivity = null;
     protected View mView = null;
-    protected int mLanguageNum = 0; //選択された言語ナンバー保存用
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

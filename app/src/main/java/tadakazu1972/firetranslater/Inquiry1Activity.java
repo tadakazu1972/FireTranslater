@@ -81,6 +81,8 @@ public class Inquiry1Activity extends AppCompatActivity {
                 String name = "i120";
                 int resourceId = getResources().getIdentifier(name, "string", getPackageName());
                 mTextResult.setText(resourceId);
+                //SharedPreferencesに保存
+                setSharedPreferences(resourceId);
             }
         });
         //けが
@@ -94,6 +96,8 @@ public class Inquiry1Activity extends AppCompatActivity {
                 String name = "i130";
                 int resourceId = getResources().getIdentifier(name, "string", getPackageName());
                 mTextResult.setText(resourceId);
+                //SharedPreferencesに保存
+                setSharedPreferences(resourceId);
             }
         });
         //クリア
@@ -101,6 +105,9 @@ public class Inquiry1Activity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 mTextResult.setText("");
+                //SharedPreferenceもクリアしておく
+                SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mActivity);
+                sp.edit().putString("result1", "").apply();
             }
         });
         //ホーム
@@ -111,5 +118,12 @@ public class Inquiry1Activity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    private void setSharedPreferences(int resId){
+        //翻訳結果で用いるためSharedPreferenceに登録
+        String s = getResources().getString(resId);
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mActivity);
+        sp.edit().putString("result1", s).apply();
     }
 }

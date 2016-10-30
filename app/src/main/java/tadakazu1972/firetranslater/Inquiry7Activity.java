@@ -78,6 +78,8 @@ public class Inquiry7Activity extends AppCompatActivity {
                 String name = "i710";
                 int resourceId = getResources().getIdentifier(name, "string", getPackageName());
                 mTextResult.setText(resourceId);
+                //SharedPreferencesに保存
+                setSharedPreferences(resourceId);
             }
         });
         //
@@ -91,6 +93,8 @@ public class Inquiry7Activity extends AppCompatActivity {
                 String name = "i720";
                 int resourceId = getResources().getIdentifier(name, "string", getPackageName());
                 mTextResult.setText(resourceId);
+                //SharedPreferencesに保存
+                setSharedPreferences(resourceId);
             }
         });
         //
@@ -104,6 +108,8 @@ public class Inquiry7Activity extends AppCompatActivity {
                 String name = "i730";
                 int resourceId = getResources().getIdentifier(name, "string", getPackageName());
                 mTextResult.setText(resourceId);
+                //SharedPreferencesに保存
+                setSharedPreferences(resourceId);
             }
         });
         //
@@ -117,6 +123,8 @@ public class Inquiry7Activity extends AppCompatActivity {
                 String name = "i740";
                 int resourceId = getResources().getIdentifier(name, "string", getPackageName());
                 mTextResult.setText(resourceId);
+                //SharedPreferencesに保存
+                setSharedPreferences(resourceId);
             }
         });
         //
@@ -130,6 +138,8 @@ public class Inquiry7Activity extends AppCompatActivity {
                 String name = "i750";
                 int resourceId = getResources().getIdentifier(name, "string", getPackageName());
                 mTextResult.setText(resourceId);
+                //SharedPreferencesに保存
+                setSharedPreferences(resourceId);
             }
         });
         //
@@ -143,6 +153,8 @@ public class Inquiry7Activity extends AppCompatActivity {
                 String name = "i760";
                 int resourceId = getResources().getIdentifier(name, "string", getPackageName());
                 mTextResult.setText(resourceId);
+                //SharedPreferencesに保存
+                setSharedPreferences(resourceId);
             }
         });
         //
@@ -156,6 +168,8 @@ public class Inquiry7Activity extends AppCompatActivity {
                 String name = "i770";
                 int resourceId = getResources().getIdentifier(name, "string", getPackageName());
                 mTextResult.setText(resourceId);
+                //SharedPreferencesに保存
+                setSharedPreferences(resourceId);
             }
         });
         //
@@ -169,6 +183,8 @@ public class Inquiry7Activity extends AppCompatActivity {
                 String name = "i780";
                 int resourceId = getResources().getIdentifier(name, "string", getPackageName());
                 mTextResult.setText(resourceId);
+                //SharedPreferencesに保存
+                setSharedPreferences(resourceId);
             }
         });
         //
@@ -182,6 +198,8 @@ public class Inquiry7Activity extends AppCompatActivity {
                 String name = "i790";
                 int resourceId = getResources().getIdentifier(name, "string", getPackageName());
                 mTextResult.setText(resourceId);
+                //SharedPreferencesに保存
+                setSharedPreferences(resourceId);
             }
         });
         //
@@ -195,6 +213,8 @@ public class Inquiry7Activity extends AppCompatActivity {
                 String name = "i7100";
                 int resourceId = getResources().getIdentifier(name, "string", getPackageName());
                 mTextResult.setText(resourceId);
+                //SharedPreferencesに保存
+                setSharedPreferences(resourceId);
             }
         });
         //
@@ -208,13 +228,19 @@ public class Inquiry7Activity extends AppCompatActivity {
                 String name = "i7110";
                 int resourceId = getResources().getIdentifier(name, "string", getPackageName());
                 mTextResult.setText(resourceId);
+                //SharedPreferencesに保存
+                setSharedPreferences(resourceId);
             }
         });
+
         //クリア
         mView.findViewById(R.id.btnClear).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 mTextResult.setText("");
+                //SharedPreferenceもクリアしておく
+                SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mActivity);
+                sp.edit().putString("result7", "").apply();
             }
         });
         //ホーム
@@ -225,5 +251,12 @@ public class Inquiry7Activity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    private void setSharedPreferences(int resId){
+        //翻訳結果で用いるためSharedPreferenceに登録
+        String s = getResources().getString(resId);
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mActivity);
+        sp.edit().putString("result7", s).apply();
     }
 }

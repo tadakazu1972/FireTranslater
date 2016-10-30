@@ -176,6 +176,9 @@ public class Inquiry4Activity extends AppCompatActivity {
                 String name = "i410";
                 int resourceId = getResources().getIdentifier(name, "string", getPackageName());
                 mTextResult.setText(resourceId);
+                //数字と合わせてSharedPreferencesに保存
+                String s = getResources().getString(resourceId);
+                setSharedPreferences(mNum+s);
             }
         });
         //
@@ -189,6 +192,9 @@ public class Inquiry4Activity extends AppCompatActivity {
                 String name = "i420";
                 int resourceId = getResources().getIdentifier(name, "string", getPackageName());
                 mTextResult.setText(resourceId);
+                //数字と合わせてSharedPreferencesに保存
+                String s = getResources().getString(resourceId);
+                setSharedPreferences(mNum+s);
             }
         });
         mButton13 = (Button)findViewById(R.id.btn413);
@@ -201,8 +207,12 @@ public class Inquiry4Activity extends AppCompatActivity {
                 String name = "i430";
                 int resourceId = getResources().getIdentifier(name, "string", getPackageName());
                 mTextResult.setText(resourceId);
+                //数字と合わせてSharedPreferencesに保存
+                String s = getResources().getString(resourceId);
+                setSharedPreferences(mNum+s);
             }
         });
+
         //クリア
         mView.findViewById(R.id.btnClear).setOnClickListener(new View.OnClickListener(){
             @Override
@@ -210,6 +220,9 @@ public class Inquiry4Activity extends AppCompatActivity {
                 mNum = "";
                 mTextResult0.setText(mNum);
                 mTextResult.setText("");
+                //SharedPreferenceもクリアしておく
+                SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mActivity);
+                sp.edit().putString("result4", "").apply();
             }
         });
         //ホーム
@@ -220,5 +233,11 @@ public class Inquiry4Activity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    private void setSharedPreferences(String s){
+        //翻訳結果で用いるためSharedPreferenceに登録
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mActivity);
+        sp.edit().putString("result4", s).apply();
     }
 }

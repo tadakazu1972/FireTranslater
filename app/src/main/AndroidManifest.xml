@@ -31,6 +31,8 @@
         </activity>
         <activity android:name=".Inquiry7Activity">
         </activity>
+        <activity android:name=".ResultActivity">
+        </activity>
         <activity android:name=".Explain1Activity">
         </activity>
         <activity android:name=".Explain2Activity">
