@@ -31,8 +31,9 @@ public class HosokuActivity extends AppCompatActivity {
     private Button mButton4 = null;
     private Button mButton5 = null;
     private Button mButton6 = null;
-    //電卓数字格納用
-    String mNum = null;
+    //アレルギー情報＋妊娠情報格納用
+    String mHosoku1 = null;
+    String mHosoku2 = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,8 +45,9 @@ public class HosokuActivity extends AppCompatActivity {
         //選択言語番号を呼び出し
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
         mLangNum = sp.getString("language","1"); // 第２引数はkeyが存在しない時に返す初期値
-        //電卓数字格納変数初期化
-        mNum = "";
+        //アレルギー情報＋妊娠情報格納変数初期化
+        mHosoku1 = "";
+        mHosoku2 = "";
         //翻訳表示TextView初期化
         initTextViews();
         //ボタン初期化
@@ -89,10 +91,11 @@ public class HosokuActivity extends AppCompatActivity {
             public void onClick(View v){
                 String name = "h110";
                 int resourceId = getResources().getIdentifier(name, "string", getPackageName());
-                mTextResult.setText(resourceId);
-                //数字と合わせてSharedPreferencesに保存
+                mTextResult0.setText(resourceId);
+                //SharedPreferencesに保存
                 String s = getResources().getString(resourceId);
-                setSharedPreferences("アレルギー"+s);
+                mHosoku1 = "アレルギー:"+s;
+                setSharedPreferences(mHosoku1, mHosoku2);
             }
         });
         //
@@ -105,10 +108,11 @@ public class HosokuActivity extends AppCompatActivity {
             public void onClick(View v){
                 String name = "h120";
                 int resourceId = getResources().getIdentifier(name, "string", getPackageName());
-                mTextResult.setText(resourceId);
-                //数字と合わせてSharedPreferencesに保存
+                mTextResult0.setText(resourceId);
+                //SharedPreferencesに保存
                 String s = getResources().getString(resourceId);
-                setSharedPreferences("アレルギー"+s);
+                mHosoku1 = "アレルギー:"+s;
+                setSharedPreferences(mHosoku1, mHosoku2);
             }
         });
         //
@@ -121,10 +125,11 @@ public class HosokuActivity extends AppCompatActivity {
             public void onClick(View v){
                 String name = "h130";
                 int resourceId = getResources().getIdentifier(name, "string", getPackageName());
-                mTextResult.setText(resourceId);
-                //数字と合わせてSharedPreferencesに保存
+                mTextResult0.setText(resourceId);
+                //SharedPreferencesに保存
                 String s = getResources().getString(resourceId);
-                setSharedPreferences(s);
+                mHosoku1 = "アレルギー:"+s;
+                setSharedPreferences(mHosoku1, mHosoku2);
             }
         });
         //
@@ -137,10 +142,11 @@ public class HosokuActivity extends AppCompatActivity {
             public void onClick(View v){
                 String name = "h140";
                 int resourceId = getResources().getIdentifier(name, "string", getPackageName());
-                mTextResult.setText(resourceId);
-                //数字と合わせてSharedPreferencesに保存
+                mTextResult0.setText(resourceId);
+                //SharedPreferencesに保存
                 String s = getResources().getString(resourceId);
-                setSharedPreferences(s);
+                mHosoku1 = "アレルギー:"+s;
+                setSharedPreferences(mHosoku1, mHosoku2);
             }
         });
         //
@@ -154,9 +160,10 @@ public class HosokuActivity extends AppCompatActivity {
                 String name = "h160";
                 int resourceId = getResources().getIdentifier(name, "string", getPackageName());
                 mTextResult.setText(resourceId);
-                //数字と合わせてSharedPreferencesに保存
+                //SharedPreferencesに保存
                 String s = getResources().getString(resourceId);
-                setSharedPreferences("妊娠"+s);
+                mHosoku2 = "妊娠:"+s;
+                setSharedPreferences(mHosoku1, mHosoku2);
             }
         });
         //
@@ -170,9 +177,10 @@ public class HosokuActivity extends AppCompatActivity {
                 String name = "h170";
                 int resourceId = getResources().getIdentifier(name, "string", getPackageName());
                 mTextResult.setText(resourceId);
-                //数字と合わせてSharedPreferencesに保存
+                //SharedPreferencesに保存
                 String s = getResources().getString(resourceId);
-                setSharedPreferences("妊娠"+s);
+                mHosoku2 = "妊娠:"+s;
+                setSharedPreferences(mHosoku1, mHosoku2);
             }
         });
 
@@ -180,9 +188,10 @@ public class HosokuActivity extends AppCompatActivity {
         mView.findViewById(R.id.btnClear).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                mNum = "";
-                mTextResult0.setText(mNum);
-                mTextResult.setText("");
+                mHosoku1 = "";
+                mTextResult0.setText(mHosoku1);
+                mHosoku2 = "";
+                mTextResult.setText(mHosoku2);
                 //SharedPreferenceもクリアしておく
                 SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mActivity);
                 sp.edit().putString("hosoku1", "").apply();
@@ -198,9 +207,10 @@ public class HosokuActivity extends AppCompatActivity {
         });
     }
 
-    private void setSharedPreferences(String s){
+    private void setSharedPreferences(String s1, String s2){
         //翻訳結果で用いるためSharedPreferenceに登録
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mActivity);
+        String s = s1 + "\n" +s2; //改行はさんどく
         sp.edit().putString("hosoku1", s).apply();
     }
 }

@@ -182,6 +182,15 @@ public class ResultActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        //
+        mButtonh1 = (Button)findViewById(R.id.btnRh1);
+        mButtonh1.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(mActivity, HosokuActivity.class);
+                startActivity(intent);
+            }
+        });
 
         //クリア
         mView.findViewById(R.id.btnClear).setOnClickListener(new View.OnClickListener(){
@@ -196,6 +205,7 @@ public class ResultActivity extends AppCompatActivity {
                 mText5.setText("");
                 mText6.setText("");
                 mText7.setText("");
+                mTexth1.setText("");
                 //SharedPreferenceもクリアしておく
                 SharedPreferences sps1 = PreferenceManager.getDefaultSharedPreferences(mActivity);
                 sps1.edit().putString("syobyosya1", "").apply();
@@ -213,6 +223,8 @@ public class ResultActivity extends AppCompatActivity {
                 sp6.edit().putString("result6", "").apply();
                 SharedPreferences sp7 = PreferenceManager.getDefaultSharedPreferences(mActivity);
                 sp7.edit().putString("result7", "").apply();
+                SharedPreferences sph1 = PreferenceManager.getDefaultSharedPreferences(mActivity);
+                sph1.edit().putString("hosoku1", "").apply();
             }
         });
         //ホーム
