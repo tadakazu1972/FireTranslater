@@ -17,6 +17,8 @@
         </activity>
         <activity android:name=".HomeActivity">
         </activity>
+        <activity android:name=".SyobyosyaActivity">
+        </activity>
         <activity android:name=".Inquiry1Activity">
         </activity>
         <activity android:name=".Inquiry2Activity">
@@ -30,6 +32,8 @@
         <activity android:name=".Inquiry6Activity">
         </activity>
         <activity android:name=".Inquiry7Activity">
+        </activity>
+        <activity android:name=".HosokuActivity">
         </activity>
         <activity android:name=".ResultActivity">
         </activity>

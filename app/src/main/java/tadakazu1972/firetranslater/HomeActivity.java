@@ -45,6 +45,13 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void initButtons(){
+        mView.findViewById(R.id.btnSyobyosya1).setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(mActivity, SyobyosyaActivity.class);
+                startActivity(intent);
+            }
+        });
         mView.findViewById(R.id.btnInquiry1).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
@@ -91,6 +98,13 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 Intent intent = new Intent(mActivity, Inquiry7Activity.class);
+                startActivity(intent);
+            }
+        });
+        mView.findViewById(R.id.btnHosoku1).setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(mActivity, HosokuActivity.class);
                 startActivity(intent);
             }
         });

@@ -10,208 +10,37 @@
               android:padding="8dp">
 
     <Button
-        android:id="@+id/btnResult"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text="翻訳結果"
+        android:text="補足情報"
         android:textSize="18sp"
-        android:textColor="#1111ee"
-        android:backgroundTint="#eeee11"
+        android:textColor="#ffffff"
+        android:backgroundTint="#11bb11"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="4dp"/>
+        android:layout_marginBottom="20dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <Button
-            android:id="@+id/btnRs1"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+        <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="傷病者情報"
-            android:textSize="18sp"
-            android:textColor="#ffffff"
-            android:backgroundTint="#11bb11"
+            android:text="◆アレルギー"
+            android:textSize="24sp"
+            android:textColor="#111111"
+            android:paddingLeft="8dp"
             android:layout_weight="1"/>
         <TextView
-            android:id="@+id/txtRs1"
+            android:id="@+id/h10"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textColor="#ff1111"
+            android:textColor="#111111"
             android:textSize="24sp"
-            android:textStyle="bold"
             android:paddingLeft="8dp"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="2"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <Button
-            android:id="@+id/btnR1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="病気 or けが"
-            android:textSize="18sp"
-            android:textColor="#ffffff"
-            android:backgroundTint="#ff1111"
+            android:background="@drawable/frame"
             android:layout_weight="1"/>
-        <TextView
-            android:id="@+id/txtR1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textColor="#ff1111"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:paddingLeft="8dp"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="2"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <Button
-            android:id="@+id/btnR2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="痛む部位"
-            android:textSize="18sp"
-            android:textColor="#ffffff"
-            android:backgroundTint="#ff1111"
-            android:layout_weight="1"/>
-        <TextView
-            android:id="@+id/txtR2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textColor="#ff1111"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:paddingLeft="8dp"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="2"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <Button
-            android:id="@+id/btnR3"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="今の症状"
-            android:textSize="18sp"
-            android:textColor="#ffffff"
-            android:backgroundTint="#ff1111"
-            android:layout_weight="1"/>
-        <TextView
-            android:id="@+id/txtR3"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textColor="#ff1111"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:paddingLeft="8dp"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="2"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <Button
-            android:id="@+id/btnR4"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="いつから?"
-            android:textSize="18sp"
-            android:textColor="#ffffff"
-            android:backgroundTint="#ff1111"
-            android:layout_weight="1"/>
-        <TextView
-            android:id="@+id/txtR4"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textColor="#ff1111"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:paddingLeft="8dp"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="2"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <Button
-            android:id="@+id/btnR5"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="何をしていて?"
-            android:textSize="16sp"
-            android:textColor="#ffffff"
-            android:backgroundTint="#ff1111"
-            android:layout_weight="1"/>
-        <TextView
-            android:id="@+id/txtR5"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textColor="#ff1111"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:paddingLeft="8dp"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="2"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <Button
-            android:id="@+id/btnR6"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="既往症"
-            android:textSize="18sp"
-            android:textColor="#ffffff"
-            android:backgroundTint="#ff1111"
-            android:layout_weight="1"/>
-        <TextView
-            android:id="@+id/txtR6"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textColor="#ff1111"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:paddingLeft="8dp"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="2"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <Button
-            android:id="@+id/btnR7"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="服用中の薬"
-            android:textSize="18sp"
-            android:textColor="#ffffff"
-            android:backgroundTint="#ff1111"
-            android:layout_weight="1"/>
-        <TextView
-            android:id="@+id/txtR7"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textColor="#ff1111"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:paddingLeft="8dp"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="2"/>
     </LinearLayout>
 
     <LinearLayout
@@ -219,30 +48,182 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <Button
-            android:id="@+id/btnRh1"
+            android:id="@+id/btnh11"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="補足情報"
-            android:textSize="18sp"
-            android:textColor="#ffffff"
-            android:backgroundTint="#11bb11"
+            android:textSize="24sp"
+            android:textColor="#111111"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/btnh12"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textColor="#111111"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="24sp"
+            android:textColor="#111111"
+            android:gravity="center"
             android:layout_weight="1"/>
         <TextView
-            android:id="@+id/txtRh1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:text="⬇︎"
+            android:textColor="#5577cc"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="◇薬"
+            android:textSize="24sp"
+            android:textColor="#111111"
+            android:paddingLeft="40dp"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/btnh13"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textColor="#111111"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="40dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="◇食物"
+            android:textSize="24sp"
+            android:textColor="#111111"
+            android:paddingLeft="40dp"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/btnh14"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textColor="#111111"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="◆妊娠"
+            android:textSize="24sp"
+            android:textColor="#111111"
+            android:paddingLeft="8dp"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/h15"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="#111111"
+            android:textSize="24sp"
+            android:paddingLeft="8dp"
+            android:background="@drawable/frame"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp">
+        <Button
+            android:id="@+id/btnh16"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textColor="#111111"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/btnh17"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textColor="#111111"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/h100"
+            android:textSize="24sp"
+            android:textColor="#111111"
+            android:gravity="center"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/txtResult0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
             android:textColor="#ff1111"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:paddingLeft="8dp"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="2"/>
+            android:gravity="center"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/h150"
+            android:textSize="24sp"
+            android:textColor="#111111"
+            android:gravity="center"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/txtResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ff1111"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_weight="1"/>
     </LinearLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
+        android:layout_height="wrap_content">
         <ImageButton
             android:id="@+id/btnClear"
             android:layout_width="48dp"

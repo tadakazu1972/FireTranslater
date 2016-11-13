@@ -17,6 +17,7 @@ public class ResultActivity extends AppCompatActivity {
     protected ResultActivity mActivity = null;
     protected View mView = null;
     //ボタン
+    private Button mButtons1 = null;
     private Button mButton1 = null;
     private Button mButton2 = null;
     private Button mButton3 = null;
@@ -24,7 +25,9 @@ public class ResultActivity extends AppCompatActivity {
     private Button mButton5 = null;
     private Button mButton6 = null;
     private Button mButton7 = null;
+    private Button mButtonh1 = null;
     //翻訳表示用TextView
+    private TextView mTexts1 = null;
     private TextView mText1 = null;
     private TextView mText2 = null;
     private TextView mText3 = null;
@@ -32,6 +35,7 @@ public class ResultActivity extends AppCompatActivity {
     private TextView mText5 = null;
     private TextView mText6 = null;
     private TextView mText7 = null;
+    private TextView mTexth1 = null;
 
 
 
@@ -49,6 +53,12 @@ public class ResultActivity extends AppCompatActivity {
     }
 
     private void initTextViews(){
+        //texts1
+        mTexts1 = (TextView)findViewById(R.id.txtRs1);
+        //選択言語番号を呼び出し
+        SharedPreferences sps1 = PreferenceManager.getDefaultSharedPreferences(this);
+        String ss1 = sps1.getString("syobyosya1",""); // 第２引数はkeyが存在しない時に返す初期値
+        mTexts1.setText(ss1);
         //text1
         mText1 = (TextView)findViewById(R.id.txtR1);
         //選択言語番号を呼び出し
@@ -91,9 +101,24 @@ public class ResultActivity extends AppCompatActivity {
         SharedPreferences sp7 = PreferenceManager.getDefaultSharedPreferences(this);
         String s7 = sp7.getString("result7",""); // 第２引数はkeyが存在しない時に返す初期値
         mText7.setText(s7);
+        //texth1
+        mTexth1 = (TextView)findViewById(R.id.txtRh1);
+        //選択言語番号を呼び出し
+        SharedPreferences sph1 = PreferenceManager.getDefaultSharedPreferences(this);
+        String sh1 = sph1.getString("hosoku1",""); // 第２引数はkeyが存在しない時に返す初期値
+        mTexth1.setText(sh1);
     }
 
     private void initButtons(){
+        //
+        mButtons1 = (Button)findViewById(R.id.btnRs1);
+        mButtons1.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(mActivity, SyobyosyaActivity.class);
+                startActivity(intent);
+            }
+        });
         //
         mButton1 = (Button)findViewById(R.id.btnR1);
         mButton1.setOnClickListener(new View.OnClickListener(){
@@ -163,6 +188,7 @@ public class ResultActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 //全ての翻訳結果をクリア
+                mTexts1.setText("");
                 mText1.setText("");
                 mText2.setText("");
                 mText3.setText("");
@@ -171,6 +197,8 @@ public class ResultActivity extends AppCompatActivity {
                 mText6.setText("");
                 mText7.setText("");
                 //SharedPreferenceもクリアしておく
+                SharedPreferences sps1 = PreferenceManager.getDefaultSharedPreferences(mActivity);
+                sps1.edit().putString("syobyosya1", "").apply();
                 SharedPreferences sp1 = PreferenceManager.getDefaultSharedPreferences(mActivity);
                 sp1.edit().putString("result1", "").apply();
                 SharedPreferences sp2 = PreferenceManager.getDefaultSharedPreferences(mActivity);
