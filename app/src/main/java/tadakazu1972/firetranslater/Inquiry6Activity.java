@@ -35,6 +35,8 @@ public class Inquiry6Activity extends AppCompatActivity {
     private Button mButton10 = null;
     private Button mButton11 = null;
     private Button mButton12 = null;
+    private Button mButton13 = null;
+    private Button mButton14 = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -242,6 +244,36 @@ public class Inquiry6Activity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 String name = "i6120";
+                int resourceId = getResources().getIdentifier(name, "string", getPackageName());
+                mTextResult.setText(resourceId);
+                //SharedPreferencesに保存
+                setSharedPreferences(resourceId);
+            }
+        });
+        //
+        mButton13 = (Button)findViewById(R.id.btn613);
+        String name13 = "i613" + mLangNum;
+        int resourceId13 = getResources().getIdentifier(name13, "string", getPackageName());
+        mButton13.setText(resourceId13);
+        mButton13.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                String name = "i6130";
+                int resourceId = getResources().getIdentifier(name, "string", getPackageName());
+                mTextResult.setText(resourceId);
+                //SharedPreferencesに保存
+                setSharedPreferences(resourceId);
+            }
+        });
+        //
+        mButton14 = (Button)findViewById(R.id.btn614);
+        String name14 = "i614" + mLangNum;
+        int resourceId14 = getResources().getIdentifier(name14, "string", getPackageName());
+        mButton14.setText(resourceId14);
+        mButton14.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                String name = "i6140";
                 int resourceId = getResources().getIdentifier(name, "string", getPackageName());
                 mTextResult.setText(resourceId);
                 //SharedPreferencesに保存
