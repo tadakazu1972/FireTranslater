@@ -36,6 +36,30 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        //中国語
+        mView.findViewById(R.id.btnChinese).setOnClickListener(new OnClickListener(){
+            @Override
+            public void onClick(View v){
+                //選択した言語番号保存　中国語＝2
+                SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mActivity);
+                sp.edit().putString("language", "2").apply();
+                //ホーム画面へ
+                Intent intent = new Intent(mActivity, HomeActivity.class);
+                startActivity(intent);
+            }
+        });
+        //韓国語
+        mView.findViewById(R.id.btnKorean).setOnClickListener(new OnClickListener(){
+            @Override
+            public void onClick(View v){
+                //選択した言語番号保存　韓国語＝3
+                SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mActivity);
+                sp.edit().putString("language", "3").apply();
+                //ホーム画面へ
+                Intent intent = new Intent(mActivity, HomeActivity.class);
+                startActivity(intent);
+            }
+        });
 
         //日本語
         mView.findViewById(R.id.btnJapanese).setOnClickListener(new OnClickListener(){
