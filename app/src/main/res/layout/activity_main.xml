@@ -38,13 +38,13 @@
             android:backgroundTint="#6666ee"
             android:layout_weight="1"/>
         <Button
+            android:id="@+id/btnKorean"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Español"
+            android:text="한국"
             android:textSize="18sp"
             android:textColor="#ffffff"
-            android:backgroundTint="#cccccc"
-            android:id="@+id/btnEspanyol"
+            android:backgroundTint="#6666ee"
             android:layout_weight="1"/>
     </LinearLayout>
     <LinearLayout
@@ -55,42 +55,19 @@
             android:id="@+id/btnChinese"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="中国"
+            android:text="中国语文"
             android:textSize="18sp"
             android:textColor="#ffffff"
             android:backgroundTint="#6666ee"
             android:layout_weight="1"/>
         <Button
+            android:id="@+id/btnTraditionalChinese"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Nederlands"
-            android:textSize="18sp"
-            android:textColor="#ffffff"
-            android:backgroundTint="#cccccc"
-            android:id="@+id/btnNederlands"
-            android:layout_weight="1"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <Button
-            android:id="@+id/btnKorean"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="한국"
+            android:text="中國語文"
             android:textSize="18sp"
             android:textColor="#ffffff"
             android:backgroundTint="#6666ee"
-            android:layout_weight="1"/>
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="Svenska"
-            android:textSize="18sp"
-            android:textColor="#ffffff"
-            android:backgroundTint="#cccccc"
-            android:id="@+id/btnSvenska"
             android:layout_weight="1"/>
     </LinearLayout>
     <LinearLayout
@@ -100,20 +77,20 @@
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Pусский"
+            android:text="ไทย"
             android:textSize="18sp"
             android:textColor="#ffffff"
             android:backgroundTint="#cccccc"
-            android:id="@+id/btnRussian"
+            android:id="@+id/btnThai"
             android:layout_weight="1"/>
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Português"
+            android:text="tagalog"
             android:textSize="18sp"
             android:textColor="#ffffff"
             android:backgroundTint="#cccccc"
-            android:id="@+id/btnPortuguese"
+            android:id="@+id/btnPhilippine"
             android:layout_weight="1"/>
     </LinearLayout>
     <LinearLayout
@@ -146,20 +123,20 @@
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Deutsch"
+            android:text="Português"
             android:textSize="18sp"
             android:textColor="#ffffff"
             android:backgroundTint="#cccccc"
-            android:id="@+id/btnGermany"
+            android:id="@+id/btnPortuguese"
             android:layout_weight="1"/>
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Malay"
+            android:text="tiếng việt"
             android:textSize="18sp"
             android:textColor="#ffffff"
             android:backgroundTint="#cccccc"
-            android:id="@+id/btnMalay"
+            android:id="@+id/btnVietnum"
             android:layout_weight="1"/>
     </LinearLayout>
     <LinearLayout
@@ -169,20 +146,43 @@
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Italiano"
+            android:text="Deutsch"
             android:textSize="18sp"
             android:textColor="#ffffff"
             android:backgroundTint="#cccccc"
-            android:id="@+id/btnItalian"
+            android:id="@+id/btnGermany"
             android:layout_weight="1"/>
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="ไทย"
+            android:text="Español"
             android:textSize="18sp"
             android:textColor="#ffffff"
             android:backgroundTint="#cccccc"
-            android:id="@+id/btnThai"
+            android:id="@+id/btnEspanyol"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Pусский"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            android:backgroundTint="#cccccc"
+            android:id="@+id/btnRussian"
+            android:layout_weight="1"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Malay"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            android:backgroundTint="#cccccc"
+            android:id="@+id/btnMalay"
             android:layout_weight="1"/>
     </LinearLayout>
 

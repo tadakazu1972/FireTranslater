@@ -36,11 +36,11 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        //中国語
+        //中国語(簡体)
         mView.findViewById(R.id.btnChinese).setOnClickListener(new OnClickListener(){
             @Override
             public void onClick(View v){
-                //選択した言語番号保存　中国語＝2
+                //選択した言語番号保存　中国語(簡体)＝2
                 SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mActivity);
                 sp.edit().putString("language", "2").apply();
                 //ホーム画面へ
@@ -55,6 +55,18 @@ public class MainActivity extends AppCompatActivity {
                 //選択した言語番号保存　韓国語＝3
                 SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mActivity);
                 sp.edit().putString("language", "3").apply();
+                //ホーム画面へ
+                Intent intent = new Intent(mActivity, HomeActivity.class);
+                startActivity(intent);
+            }
+        });
+        //中国語(繁体)
+        mView.findViewById(R.id.btnTraditionalChinese).setOnClickListener(new OnClickListener(){
+            @Override
+            public void onClick(View v){
+                //選択した言語番号保存　中国語(繁体)＝4
+                SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mActivity);
+                sp.edit().putString("language", "4").apply();
                 //ホーム画面へ
                 Intent intent = new Intent(mActivity, HomeActivity.class);
                 startActivity(intent);
