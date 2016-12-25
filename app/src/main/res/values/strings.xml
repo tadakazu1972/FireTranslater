@@ -132,7 +132,7 @@
 <string name="s121">Gender</string>
 <string name="s131">Male</string>
 <string name="s141">Female</string>
-<string name="i101">We are Emergency Medical Service（EMS)  from a fire department.\nWe\'re here to help you.</string>
+<string name="i101">We are Emergency Medical Service(EMS) from a fire department.\nWe\'re here to help you.</string>
 <string name="i111">What happened to you?</string>
 <string name="i121">sick</string>
 <string name="i131">injury</string>
@@ -233,7 +233,7 @@
 <string name="e1101">keep warm</string>
 <string name="e1111">Cooling</string>
 <string name="e1121">suction</string>
-<string name="e201">We will take you to the nearest hospital immidiately.Please get in the ambulance.</string>
+<string name="e201">We will take you to the nearest hospital immidiately.\nPlease get in the ambulance.</string>
 <string name="e211">Ambulance transportation is free of charge.</string>
 <string name="e221">Please wait while I contact a hospital suitable for your symptom.</string>
 <string name="e231">The hospital has confirmed your arrival.\nWe will leave now.</string>

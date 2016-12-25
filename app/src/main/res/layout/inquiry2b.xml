@@ -10,10 +10,10 @@
               android:padding="8dp">
 
     <Button
-        android:id="@+id/btnInquiry7"
+        android:id="@+id/btnInquiry2"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text="@string/i700"
+        android:text="どこが痛みますか？"
         android:textSize="18sp"
         android:textColor="#ffffff"
         android:backgroundTint="#ee1111"
@@ -21,11 +21,11 @@
         android:layout_marginBottom="8dp"/>
 
     <TextView
-        android:id="@+id/i71"
+        android:id="@+id/i21"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="#111111"
-        android:textSize="20sp"
+        android:textSize="24sp"
         android:paddingLeft="8dp"
         android:background="@drawable/frame"
         android:layout_marginBottom="20dp"/>
@@ -35,29 +35,24 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <Button
-            android:id="@+id/btn71"
+            android:id="@+id/btnHead"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:textColor="#ff1111"
-            android:layout_weight="1"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <Button
-            android:id="@+id/btn72"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
+            android:textSize="24sp"
             android:textColor="#111111"
             android:layout_weight="1"/>
         <Button
-            android:id="@+id/btn73"
+            android:id="@+id/btnEye"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
+            android:textSize="24sp"
+            android:textColor="#111111"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/btnEar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
             android:textColor="#111111"
             android:layout_weight="1"/>
     </LinearLayout>
@@ -66,14 +61,48 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <Button
-            android:id="@+id/btn74"
+            android:id="@+id/btnNose"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textColor="#111111"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/btnMouth"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textColor="#111111"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/btnTooth"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textColor="#111111"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnThroat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textColor="#111111"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/btnShoulder"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:textColor="#111111"
+            android:maxLines="1"
             android:layout_weight="1"/>
         <Button
-            android:id="@+id/btn75"
+            android:id="@+id/btnStomach"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textSize="20sp"
@@ -86,36 +115,24 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <Button
-            android:id="@+id/btn76"
+            android:id="@+id/btnChest"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
+            android:textSize="24sp"
             android:textColor="#111111"
             android:layout_weight="1"/>
         <Button
-            android:id="@+id/btn77"
+            android:id="@+id/btnUpperBack"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:textColor="#111111"
-            android:layout_weight="1"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <Button
-            android:id="@+id/btn78"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textColor="#111111"
             android:layout_weight="1"/>
         <Button
-            android:id="@+id/btn79"
+            android:id="@+id/btnLowerBack"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textColor="#111111"
             android:layout_weight="1"/>
     </LinearLayout>
@@ -124,17 +141,52 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <Button
-            android:id="@+id/btn710"
+            android:id="@+id/btnHandOrArm"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
+            android:textSize="18sp"
+            android:textColor="#111111"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btnFinger"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textColor="#111111"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btnButtocks"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textColor="#111111"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnLegOrFoot"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
             android:textColor="#111111"
             android:layout_weight="1"/>
         <Button
-            android:id="@+id/btn711"
+            android:id="@+id/btnKnee"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
+            android:textSize="24sp"
+            android:textColor="#111111"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/btnOther"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
             android:textColor="#111111"
             android:layout_weight="1"/>
     </LinearLayout>
