@@ -101,6 +101,13 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        mView.findViewById(R.id.btnPain1).setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(mActivity, PainActivity.class);
+                startActivity(intent);
+            }
+        });
         mView.findViewById(R.id.btnHosoku1).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){

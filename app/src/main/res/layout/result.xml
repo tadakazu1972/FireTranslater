@@ -219,11 +219,36 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <Button
+            android:id="@+id/btnRt1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="痛み/出血"
+            android:textSize="14sp"
+            android:textColor="#ffffff"
+            android:backgroundTint="#11bb11"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/txtRt1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="#ff1111"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:paddingLeft="8dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="2"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
             android:id="@+id/btnRh1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="補足情報"
-            android:textSize="18sp"
+            android:text="ｱﾚﾙｷﾞｰ/妊娠"
+            android:textSize="14sp"
             android:textColor="#ffffff"
             android:backgroundTint="#11bb11"
             android:layout_weight="1"/>

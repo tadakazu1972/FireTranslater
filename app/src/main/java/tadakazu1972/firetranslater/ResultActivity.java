@@ -25,6 +25,7 @@ public class ResultActivity extends AppCompatActivity {
     private Button mButton5 = null;
     private Button mButton6 = null;
     private Button mButton7 = null;
+    private Button mButtont1 = null;
     private Button mButtonh1 = null;
     //翻訳表示用TextView
     private TextView mTexts1 = null;
@@ -35,6 +36,7 @@ public class ResultActivity extends AppCompatActivity {
     private TextView mText5 = null;
     private TextView mText6 = null;
     private TextView mText7 = null;
+    private TextView mTextt1 = null;
     private TextView mTexth1 = null;
 
 
@@ -101,6 +103,12 @@ public class ResultActivity extends AppCompatActivity {
         SharedPreferences sp7 = PreferenceManager.getDefaultSharedPreferences(this);
         String s7 = sp7.getString("result7",""); // 第２引数はkeyが存在しない時に返す初期値
         mText7.setText(s7);
+        //textt1
+        mTextt1 = (TextView)findViewById(R.id.txtRt1);
+        //選択言語番号を呼び出し
+        SharedPreferences spt1 = PreferenceManager.getDefaultSharedPreferences(this);
+        String st1 = spt1.getString("pain1",""); // 第２引数はkeyが存在しない時に返す初期値
+        mTextt1.setText(st1);
         //texth1
         mTexth1 = (TextView)findViewById(R.id.txtRh1);
         //選択言語番号を呼び出し
@@ -183,6 +191,15 @@ public class ResultActivity extends AppCompatActivity {
             }
         });
         //
+        mButtont1 = (Button)findViewById(R.id.btnRt1);
+        mButtont1.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(mActivity, PainActivity.class);
+                startActivity(intent);
+            }
+        });
+        //
         mButtonh1 = (Button)findViewById(R.id.btnRh1);
         mButtonh1.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -205,6 +222,7 @@ public class ResultActivity extends AppCompatActivity {
                 mText5.setText("");
                 mText6.setText("");
                 mText7.setText("");
+                mTextt1.setText("");
                 mTexth1.setText("");
                 //SharedPreferenceもクリアしておく
                 SharedPreferences sps1 = PreferenceManager.getDefaultSharedPreferences(mActivity);
@@ -223,6 +241,8 @@ public class ResultActivity extends AppCompatActivity {
                 sp6.edit().putString("result6", "").apply();
                 SharedPreferences sp7 = PreferenceManager.getDefaultSharedPreferences(mActivity);
                 sp7.edit().putString("result7", "").apply();
+                SharedPreferences spt1 = PreferenceManager.getDefaultSharedPreferences(mActivity);
+                spt1.edit().putString("pain1", "").apply();
                 SharedPreferences sph1 = PreferenceManager.getDefaultSharedPreferences(mActivity);
                 sph1.edit().putString("hosoku1", "").apply();
             }

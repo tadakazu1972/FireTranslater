@@ -33,6 +33,8 @@
         </activity>
         <activity android:name=".Inquiry7Activity">
         </activity>
+        <activity android:name=".PainActivity">
+        </activity>
         <activity android:name=".HosokuActivity">
         </activity>
         <activity android:name=".ResultActivity">

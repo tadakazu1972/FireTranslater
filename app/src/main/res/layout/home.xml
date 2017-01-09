@@ -23,7 +23,7 @@
         android:id="@+id/btnSyobyosya1"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text="傷病者情報"
+        android:text="アレルギーと妊娠の有無"
         android:textSize="18sp"
         android:textColor="#ffffff"
         android:backgroundTint="#11bb11"
@@ -102,10 +102,21 @@
         android:layout_marginBottom="4dp"/>
 
     <Button
+        android:id="@+id/btnPain1"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="痛みと出血の程度"
+        android:textSize="18sp"
+        android:textColor="#ffffff"
+        android:backgroundTint="#11bb11"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="4dp"/>
+
+    <Button
         android:id="@+id/btnHosoku1"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text="補足情報"
+        android:text="アレルギーと妊娠の有無"
         android:textSize="18sp"
         android:textColor="#ffffff"
         android:backgroundTint="#11bb11"
