@@ -12,7 +12,7 @@
     <Button
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text="`アレルギーと妊娠の有無"
+        android:text="アレルギーと妊娠の有無"
         android:textSize="18sp"
         android:textColor="#ffffff"
         android:backgroundTint="#11bb11"
